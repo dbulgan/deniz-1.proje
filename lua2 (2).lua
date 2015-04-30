@@ -19,7 +19,7 @@ by=14
 bx=10
 mo_clearblock()
 
-for n=0,30 do
+for n=0,33 do
 mi_analyze()
 mi_loadsolution()
 mo_groupselectblock(1)
@@ -46,17 +46,16 @@ theta=omega0*dt*(180/pi)
 mo_clearblock()
 ---print(n,fx,fy,T,theta)
 
-if (n<30) then
+if (n<33) then
 mi_selectgroup(1)
 mi_movetranslate(dx,dy)
 mi_selectgroup(1)
 mi_moverotate(bx,by,theta)
----print(n)
+print(n)
 bx=bx+dx
 by=by+dy
 mo_clearblock()
-mi_savebitmap("A"..n..".bmp")
-mo_savebitmap("B"..n..".bmp")
+mo_savebitmap("C"..n..".bmp")
 end
 
 end
