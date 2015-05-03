@@ -44,18 +44,18 @@ omega=alpha*dt
 omega0=omega0+omega
 theta=omega0*dt*(180/pi)
 mo_clearblock()
----print(n,fx,fy,T,theta)
+
 
 if (n<33) then
 mi_selectgroup(1)
 mi_movetranslate(dx,dy)
 mi_selectgroup(1)
 mi_moverotate(bx,by,theta)
-print(n)
 bx=bx+dx
 by=by+dy
 mo_clearblock()
 mo_savebitmap("C"..n..".bmp")
+print(n,vx0,vy0,omega0)
 end
 
 end
